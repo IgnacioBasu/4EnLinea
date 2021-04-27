@@ -70,18 +70,28 @@ def dibujarTablero(tablero):
 
 def TableroValido(secuencia):
 	for columna in secuencia:
-		if columna > 1 or columna < 7:
+		if columna < 1 or columna > 7:
 		 return False
 	return True
 
 
-secuencia= [1,2,3,1,1,8]
-
+secuencia= [2,2,3,5]
+tablero = []
 if TableroValido(secuencia):
-   dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+	tablero = completarTableroEnOrden(secuencia, tableroVacio())
+	dibujarTablero(tablero)
+
 else:
 	print("Las columnas deben ser del 1 al 7")
 
+print(contenidoColumna(2,tablero))
+print(contenidoFila(5,tablero))
+
+print("Las columnas son: ")
+print(Columnas(tablero))
+
+print("Las filas son: ")
+print(Filas(tablero))
 
 
      
