@@ -9,6 +9,32 @@ def tableroVacio():
 			[0,0,0,0,0,0,0],
 			]
 
+
+def contenidoColumna(nro_columna, tablero):
+	columna = []
+	for  fila in tablero:
+		celda = fila[nro_columna-1]
+		columna.append(celda)
+	return columna
+
+def contenidoFila(nro_fila, tablero):
+	fila = []
+	for columna in tablero[nro_fila-1]:
+		fila.append(columna)
+	return fila
+
+def Columnas(tablero):
+	colu = []
+	for columna in range(0,7):
+		colu.append(contenidoColumna(columna,tablero))
+	return colu
+
+def Filas(tablero):
+	fil = []
+	for fila in tablero:
+		fil.append(fila)
+	return fil
+
 #La secuencia es el numero de columan donde se suelta la ficha, si es par al jugador 2 sino al 1
 def completarTableroEnOrden(secuencia, tablero):
 	
