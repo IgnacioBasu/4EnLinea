@@ -59,14 +59,18 @@ def soltarFichaEnColumna(ficha, columna, tablero):
 			return 
 
 def dibujarTablero(tablero):
+	print('+-----------------------------+')
 	for fila in tablero:
+		print('|',end=' ')
 		for celda in fila:
 			if celda == 0:
 				print(' 0 ',end=' ')
 			
 			else:
 				print(' %s ' % celda, end=' ')
-		print(' ')
+		print('|')
+	print('+-----------------------------+')
+
 
 def TableroValido(secuencia):
 	for columna in secuencia:
@@ -84,8 +88,8 @@ if TableroValido(secuencia):
 else:
 	print("Las columnas deben ser del 1 al 7")
 
-print(contenidoColumna(2,tablero))
-print(contenidoFila(5,tablero))
+#print(contenidoColumna(2,tablero))
+#print(contenidoFila(5,tablero))
 
 print("Las columnas son: ")
 print(Columnas(tablero))
