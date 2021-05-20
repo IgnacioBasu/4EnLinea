@@ -25,7 +25,7 @@ def contenidoFila(nro_fila, tablero):
 
 def Columnas(tablero):
 	colu = []
-	for columna in range(0,7):
+	for columna in range(1,8):
 		colu.append(contenidoColumna(columna,tablero))
 	return colu
 
@@ -78,8 +78,11 @@ def TableroValido(secuencia):
 		 return False
 	return True
 
-
-secuencia= [2,2,3,5]
+secuencia_ingreso = input ("Ingreso la secuencia de numeros")
+secuencia= []
+for items in secuencia_ingreso.split(','):
+	secuencia.append(int(items))
+	
 tablero = []
 if TableroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tableroVacio())
