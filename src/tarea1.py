@@ -78,11 +78,12 @@ def TableroValido(secuencia):
 		 return False
 	return True
 
-secuencia_ingreso = input ("Ingreso la secuencia de numeros")
-secuencia= []
-for items in secuencia_ingreso.split(','):
-	secuencia.append(int(items))
+#secuencia_ingreso = input ("Ingreso la secuencia de numeros")
+#secuencia= []
+#for items in secuencia_ingreso.split(','):
+	#secuencia.append(int(items))
 	
+secuencia = [1,2,3,4]
 tablero = []
 if TableroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tableroVacio())
